@@ -1,6 +1,6 @@
 package com.demo.sockit;
 
-public class productos extends provedores {
+public class productos {
 	private String nombre;
 	private String descripcion;
 	private String URL_imagen;
@@ -8,12 +8,9 @@ public class productos extends provedores {
 	private double precio;
 	private int idproductos;
 	private static int total=0;
-	public productos(int idDirecciones, String pais, String estado, String municipio, String cpostal, String calle,
-			String numeroext, int idUsuarios, String usuario, String correo, String contraseña, int idProvedor, int tel,
-			String ine, String rfc, String dirPago, String nombre, String descripcion, String uRL_imagen,
-			String categoria, double precio, int idproductos) {
-		super(idDirecciones, pais, estado, municipio, cpostal, calle, numeroext, idUsuarios, usuario, correo,
-				contraseña, idProvedor, tel, ine, rfc, dirPago);
+	
+	public productos(String nombre, String descripcion, String uRL_imagen, String categoria, double precio, int idproductos) {
+		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		URL_imagen = uRL_imagen;
@@ -21,8 +18,9 @@ public class productos extends provedores {
 		this.precio = precio;
 		total ++;
 		this.idproductos = total;
-		
 	}// constructorProductos
+
+
 	public String getNombre() {
 		return nombre;
 	}

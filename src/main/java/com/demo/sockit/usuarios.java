@@ -1,21 +1,22 @@
 package com.demo.sockit;
 
-public class usuarios extends direcciones {
+public class usuarios {
 	private int idUsuarios;
 	private String usuario;
 	private String correo;
 	private String contraseña;
 	private static int total=0;
 	
-	public usuarios(int idDirecciones, String pais, String estado, String municipio, String cpostal, String calle,
-			String numeroext, int idUsuarios, String usuario, String correo, String contraseña) {
-		super(idDirecciones, pais, estado, municipio, cpostal, calle, numeroext);
+	public usuarios(int idUsuarios, String usuario, String correo, String contraseña) {
+		super();
 		this.usuario = usuario;
 		this.correo = correo;
 		this.contraseña = contraseña;
 		total++;
 		this.idUsuarios = total;
-	}// constructor
+	}
+
+	// constructor
 
 	public String getUsuario() {
 		return usuario;

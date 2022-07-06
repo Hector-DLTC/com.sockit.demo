@@ -1,17 +1,15 @@
 package com.demo.sockit;
 
-public class provedores extends usuarios{
+public class provedores{
 	private int idProvedor;
 	private int tel;
 	private String ine;
 	private String rfc;
 	private String dirPago;
 	private static int total =0;
-	public provedores(int idDirecciones, String pais, String estado, String municipio, String cpostal, String calle,
-			String numeroext, int idUsuarios, String usuario, String correo, String contraseña, int idProvedor, int tel,
-			String ine, String rfc, String dirPago) {
-		super(idDirecciones, pais, estado, municipio, cpostal, calle, numeroext, idUsuarios, usuario, correo,
-				contraseña);
+		
+	public provedores(int idProvedor, int tel, String ine, String rfc, String dirPago) {
+		super();
 		this.tel = tel;
 		this.ine = ine;
 		this.rfc = rfc;
@@ -19,6 +17,7 @@ public class provedores extends usuarios{
 		total++;
 		this.idProvedor = total;
 	}//constructor
+	
 	public int getTel() {
 		return tel;
 	}//getTel

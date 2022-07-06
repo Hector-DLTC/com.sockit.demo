@@ -2,7 +2,7 @@ package com.demo.sockit;
 
 public class direcciones {
 	
-	private int id;
+	private int idDirecciones;
 	private String  pais;
 	private String  estado;
 	private String  municipio;
@@ -13,7 +13,7 @@ public class direcciones {
 	private static int total=0;
 
 	
-	public direcciones(int id, String pais, String estado, String municipio, String cpostal, String calle,
+	public direcciones(int idDirecciones, String pais, String estado, String municipio, String cpostal, String calle,
 			String numeroext) {
 		super();
 		
@@ -25,7 +25,7 @@ public class direcciones {
 		this.numeroext = numeroext;
 		
 		total ++;
-		this.id = total;
+		this.idDirecciones = total;
 	}
 
 
@@ -115,8 +115,8 @@ public class direcciones {
 
 
 
-	public int getId() {
-		return id;
+	public int getIdDirecciones() {
+		return idDirecciones;
 	}
 
 
@@ -125,8 +125,13 @@ public class direcciones {
 	@Override
 	public String toString() {
 		return "direcciones [getPais()=" + getPais() + ", getEstado()=" + getEstado() + ", getMunicipio()="
-				+ getMunicipio() + ", getCpostal()=" + getCpostal() + ", getCalle()=" + getCalle() + ", "
-				+ "getNumeroext()="+ getNumeroext() + ", getId()=" + getId() + "]";
+				+ getMunicipio() + ", getCpostal()=" + getCpostal() + ", getCalle()=" + getCalle() + ", getNumeroext()="
+				+ getNumeroext() + ", getIdDirecciones()=" + getIdDirecciones() + "]";
 	}
+
+
+
+
+	
 	
 }

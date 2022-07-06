@@ -1,27 +1,21 @@
 package com.demo.sockit;
 
-public class usuarios {
-	private int id;
+public class usuarios extends direcciones {
+	private int idUsuarios;
 	private String usuario;
 	private String correo;
 	private String contraseña;
-	private String direccion;
 	private static int total=0;
 	
-	public usuarios(int id, String usuario, String correo, String contraseña, String direccion) {
-		super();
+	public usuarios(int idDirecciones, String pais, String estado, String municipio, String cpostal, String calle,
+			String numeroext, int idUsuarios, String usuario, String correo, String contraseña) {
+		super(idDirecciones, pais, estado, municipio, cpostal, calle, numeroext);
 		this.usuario = usuario;
 		this.correo = correo;
 		this.contraseña = contraseña;
-		this.direccion = direccion;
 		total++;
-		this.id = total;
-	}//constructor
-	
-	public usuarios() {
-		total ++;
-		this.id=total;
-	}
+		this.idUsuarios = total;
+	}// constructor
 
 	public String getUsuario() {
 		return usuario;
@@ -47,22 +41,16 @@ public class usuarios {
 		this.contraseña = contraseña;
 	}
 
-	public String getDireccion() {
-		return direccion;
+	public int getIdUsuarios() {
+		return idUsuarios;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
-	}
-
-	public int getId() {
-		return id;
-	}
-
+	
 	@Override
 	public String toString() {
-		return "usuarios [usuario=" + usuario + ", correo=" + correo + ", contraseña=" + contraseña + ", direccion="
-				+ direccion + "]";
-	}//to string
+		return "usuarios [getUsuario()=" + getUsuario() + ", getCorreo()=" + getCorreo() + ", getContraseña()="
+				+ getContraseña() + ", getIdUsuarios()=" + getIdUsuarios() + "]";
+	}//toString
+	
 }//class usuarios
 
